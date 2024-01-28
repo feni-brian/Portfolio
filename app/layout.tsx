@@ -1,5 +1,5 @@
 import Footer from "@/components/footer";
-import Header from "@/components/hearder";
+import Header from "@/components/header";
 import ThemeSwitch from "@/components/theme-switch";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import ThemeContextProvider from "@/context/theme-context";
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
 		icon: [
 			{
 				media: "(prefers-color-scheme: dark)",
-				url: "/favicon-dark.png",
-				href: "/favicon-dark.png",
+				url: "/favicon-dark.svg",
+				href: "/favicon-dark.svg",
 			},
 			{
 				media: "(prefers-color-scheme: light)",
-				url: "/favicon.png",
-				href: "/favicon.png",
+				url: "/favicon.svg",
+				href: "/favicon.svg",
 			},
 		],
 	},
@@ -40,7 +40,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 						<Header />
 						{children}
 						<Footer />
-
 						<Toaster position="top-right" />
 						<ThemeSwitch />
 					</ActiveSectionContextProvider>
